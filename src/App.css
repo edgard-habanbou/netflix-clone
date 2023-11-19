@@ -27,6 +27,7 @@ select {
   color: #F5F5F1;
   
 }
+
 .txt-xl{
   font-size: 3rem;
   font-weight: 900;
@@ -43,4 +44,15 @@ select {
   border-radius: 10px;
   background-color: #221f1fce;
   width: 20rem;
+}
+@media screen and (max-width: 991px){
+
+  .txt-xl {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .txt-md{
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
 }

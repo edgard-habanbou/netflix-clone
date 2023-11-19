@@ -41,7 +41,8 @@
 .home-header-image img{
     width: 100%;
     object-fit:cover;
-    max-height: 70vh;
+    max-height: 80vh;
+    min-height: 70vh;
     position: absolute;
     z-index: -1;
     filter: brightness(0.4);
@@ -51,9 +52,44 @@
     background-color: var(--primary-color);
     padding: 3px 20px;
     border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--txt-color);
 }
 .get-started{
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
+.start-watching{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 15vh;
+    gap: 20px;
+}
+@media screen and (max-width: 991px){
+
+    .start-watching {
+        top: 10vh;
+    }
+    .get-started{
+        flex-direction: column;
+    }
+    .netflix-logo{
+        width: 5.5625rem;
+        height: 1.5rem;
+    }
+    .home-header{
+        padding: 1.5rem ;
+        width: 100%;
+        max-width: 100%;
+        height: 80px;
+    }
+    .btn-get-started button{
+        font-size: 1rem;
+    }
+  }

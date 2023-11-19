@@ -4,7 +4,7 @@ import '../../pages/home/home.css';
 const GetStarted = () => {
   return (
     <div className="btn-get-started">
-        <button><span className='txt-md'>Get Started &gt;</span></button>
+        <button>Get Started &gt;</button>
     </div>
 
   );
