@@ -1,14 +1,13 @@
 import React from "react"
-import logo from "../../assets/svgs/logo.svg"
 import JoinBtn from "./JoinBtn"
 import SigninBtn from "./SigninBtn"
+import "../../App.css"
+import { Link } from "react-router-dom"
 
 function StickyNav() {
     return (
         <nav className='sticky-nav'>
-            <div className='netflix-logo'>
-                <img src={logo} alt='Netflix Logo' />
-            </div>
+            <Link to={"/"} className='netflix-logo' />
             <div className='nav-account'>
                 <JoinBtn />
                 <SigninBtn />

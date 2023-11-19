@@ -2,9 +2,11 @@
 .join-btn {
     background-color: var(--primary-color);
     padding: 9px 12px;
-    text-align: center;
     width: 7rem;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .join-btn-link {
     text-transform: uppercase;
@@ -23,6 +25,9 @@
     width: 5rem;
     border-radius: 5px;
     border: 1px solid var(--txt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sign-btn-link {
     text-transform: uppercase;
@@ -32,3 +37,40 @@
     text-decoration: none;
 }
 /* Sign Button End */
+
+/* Sticky Nav Start */
+.sticky-nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black-color);
+}
+.netflix-logo {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    width: 110px;
+    background-image: url("./assets/svgs/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.nav-account {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media only screen and (max-width: 600px) {
+    .netflix-logo {
+        height: 2rem;
+        width: 20px;
+        background-image: url("./assets/svgs/smallLogo.svg");
+    }
+}
+/* Sticky Nav End */
