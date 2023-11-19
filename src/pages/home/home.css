@@ -1,0 +1,40 @@
+.netflix-logo{
+    width: 9.25rem;
+    height: 2.5rem;
+    fill: currentColor;
+    display: block;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+}
+.home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    max-width: calc(66.66666666666666% - 6rem);
+    height: 80px;
+}
+.btn-sign-in{
+    background-color: #e50914;
+    color: #F5F5F1;
+    border: none;
+    outline: none;
+    padding: 0.35rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.header-options{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-around;
+    gap: 1rem;
+}

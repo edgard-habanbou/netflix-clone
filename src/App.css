@@ -1,0 +1,30 @@
+.change-language{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 2px solid #F5F5F1;
+    background-color: #221F1F;    
+}
+.change-language img{
+    margin-left: 10px;
+}
+.select-language{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+  select {
+    width: 100px;
+    height: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid #221F1F;
+
+    background-color: #221F1F;
+    color: #F5F5F1;
+    
+  }
