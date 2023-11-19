@@ -20,8 +20,8 @@
     height: 80px;
 }
 .btn-sign-in{
-    background-color: #e50914;
-    color: #F5F5F1;
+    background-color:var(--primary-color);
+    color: var(--txt-color);
     border: none;
     outline: none;
     padding: 0.2rem 1rem;
@@ -46,4 +46,14 @@
     z-index: -1;
     filter: brightness(0.4);
     top: 0;
+}
+.btn-get-started button{
+    background-color: var(--primary-color);
+    padding: 3px 20px;
+    border-radius: 10px;
+}
+.get-started{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }

@@ -3,7 +3,7 @@
     --primary-color:#f40612;
     --bg-color:#221F1F;
     --txt-color:#F5F5F1;
-    --primary-color:#000000;
+    --black-color:#000000;
 }
 *, *::before, *::after{
     margin: 0;
