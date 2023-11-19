@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 function SigninBtn() {
     return (
-        <div className='sign-btn'>
+        <div className='btn sign-btn'>
             <Link className='sign-btn-link' to='/'>
                 Sign In
             </Link>

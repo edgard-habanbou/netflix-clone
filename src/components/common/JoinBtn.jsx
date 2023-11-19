@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 function JoinBtn() {
     return (
-        <div className='join-btn'>
+        <div className='btn join-btn'>
             <Link className='join-btn-link' to='/'>
                 Join Now
             </Link>
