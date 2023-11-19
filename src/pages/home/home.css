@@ -24,7 +24,7 @@
     color: #F5F5F1;
     border: none;
     outline: none;
-    padding: 0.35rem 1rem;
+    padding: 0.2rem 1rem;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 600;
@@ -37,4 +37,13 @@
     flex-direction: row;
     justify-content:space-around;
     gap: 1rem;
+}
+.home-header-image img{
+    width: 100%;
+    object-fit:cover;
+    max-height: 70vh;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(0.4);
+    top: 0;
 }
