@@ -68,14 +68,17 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 15vh;
     gap: 20px;
+    height: 100%;
+}
+.hero-section{
+    height: 70vh;
 }
 @media screen and (max-width: 991px){
 
-    .start-watching {
+    /* .start-watching {
         top: 10vh;
-    }
+    } */
     .get-started{
         flex-direction: column;
     }
