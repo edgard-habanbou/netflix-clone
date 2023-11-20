@@ -1,0 +1,205 @@
+/* Header Section */
+.netflix-logo {
+  width: 9.25rem;
+  height: 2.5rem;
+  fill: currentColor;
+  display: block;
+}
+.header-wrapper {
+  position: relative;
+  top: 0;
+}
+.home-header {
+  padding: 1.5rem 0;
+  max-width: calc(66.66666666666666% - 6rem);
+  height: 80px;
+}
+.btn-sign-in {
+  background-color: var(--primary-color);
+  color: var(--txt-color);
+  border: none;
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header-options {
+  gap: 1rem;
+}
+.home-header-image img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 80vh;
+  min-height: 70vh;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.4);
+  top: 0;
+}
+/* end header */
+
+/* Hero Section */
+.btn-get-started button {
+  background-color: var(--primary-color);
+  padding: 3px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--txt-color);
+}
+.get-started {
+  gap: 10px;
+}
+.start-watching {
+  text-align: center;
+  position: relative;
+  gap: 20px;
+  height: 100%;
+}
+.hero-section {
+  height: 60vh;
+}
+@media screen and (max-width: 991px) {
+  .hero-section {
+    height: 60vh;
+  }
+  .get-started {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .netflix-logo {
+    width: 5.5625rem;
+    height: 1.5rem;
+  }
+  .home-header {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+  }
+  .btn-get-started button {
+    font-size: 1rem;
+  }
+}
+/* end hero section */
+
+/* Feature Section */
+.feature {
+  background-color: var(--black-color);
+  height: 60vh;
+  position: relative;
+}
+
+.feature-content {
+  gap: 6rem;
+  padding: 5rem 20rem;
+  border-top: 10px solid var(--bg-color);
+}
+
+.feature-media-container {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-video,
+.foreground-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.second-vid {
+  width: 60%;
+  height: 70%;
+  left: 20%;
+}
+.background-video {
+  z-index: 0;
+}
+
+.foreground-image {
+  z-index: 1;
+}
+
+.reverse .feature-content {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 991px) {
+  .reverse .feature-content {
+    flex-direction: column-reverse;
+  }
+  .feature-content {
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .feature-content {
+    padding: 2rem 5rem;
+  }
+}
+/* end feature section */
+
+/* Question Section */
+.hidden {
+  display: none;
+}
+.question-section {
+  border-top: 10px solid var(--bg-color);
+  padding: 5rem 20rem;
+  background-color: var(--black-color);
+  height: fit-content;
+  gap: 0.53rem;
+}
+.answer {
+  padding: 1rem 2rem;
+  background-color: var(--bg-color);
+  width: 70vw;
+}
+.question {
+  padding: 1rem 2rem;
+  width: 70vw;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  border: 1px solid var(--black-color);
+}
+.question:hover {
+  filter: brightness(150%);
+}
+
+@media screen and (max-width: 1280px) {
+  .question-section {
+    padding: 2rem 5rem;
+  }
+}
+/* end question section */
+
+/* Footer Section */
+.footer {
+  border-top: 10px solid var(--bg-color);
+  padding: 5rem 20rem;
+  background-color: var(--black-color);
+  height: fit-content;
+}
+.footer-anchors {
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.anchors-columns li {
+  padding: 0.3rem 0rem;
+}
+.txt-color {
+  color: #b3b3b3;
+}
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: 2rem 5rem;
+  }
+}
