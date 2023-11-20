@@ -1,7 +1,7 @@
 import React from "react"
-import JoinBtn from "./JoinBtn"
-import SigninBtn from "./SigninBtn"
-import "../../App.css"
+import JoinBtn from "../JoinBtn"
+import SigninBtn from "../SigninBtn"
+import "./styles.css"
 import { Link } from "react-router-dom"
 
 function StickyNav() {

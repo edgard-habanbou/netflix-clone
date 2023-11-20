@@ -6,7 +6,7 @@ function Genre() {
     return (
         <div className='genre-page'>
             <StickyNav />
-            sdf
+            <p></p>
         </div>
     )
 }

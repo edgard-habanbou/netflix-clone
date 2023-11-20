@@ -1,0 +1,12 @@
+/* Join Button Start */
+.join-btn {
+    background-color: #e10712;
+    width: 7rem;
+}
+.join-btn:hover {
+    background-color: var(--primary-color);
+}
+.join-btn-link {
+    color: var(--txt-color);
+}
+/* Join Button End */

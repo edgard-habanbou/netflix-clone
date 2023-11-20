@@ -1,5 +1,5 @@
 import "./App.css"
-import StickyNav from "./components/common/StickyNav.jsx"
+import Genre from "./pages/genre"
 import HomePage from "./pages/home/index.jsx"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
@@ -16,7 +16,7 @@ function App() {
             <div className='App'>
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/genre' element={<StickyNav />} />
+                    <Route path='/genre' element={<Genre />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </div>

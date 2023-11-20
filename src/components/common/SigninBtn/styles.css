@@ -1,0 +1,13 @@
+/* Sign Button Start */
+.sign-btn {
+    background-color: var(--black-color);
+    width: 5rem;
+    border: 1px solid var(--txt-color);
+}
+.sign-btn:hover {
+    background-color: var(--bg-color);
+}
+.sign-btn-link {
+    color: var(--txt-color);
+}
+/* Sign Button End */
