@@ -1,18 +1,22 @@
 import React from "react";
 import "../../pages/home/home.css";
+import { features } from "../../pages/home/variables";
 
-const Feature = ({ title, desc, image, video = "", reverse = false }) => {
-  return (
-    <div className={`feature flex ${reverse ? "reverse" : ""}`}>
+const Feature = () => {
+  return features.map((feature) => (
+    <div
+      key={feature.index}
+      className={`feature flex ${feature.reverse ? "reverse" : ""}`}
+    >
       <div className="feature-content flex center full-width space-between">
         <div className="feature-media-container">
-          {video && (
+          {feature.video && (
             <video
               className={
                 "background-video" +
-                (video === "video-devices.m4v" ? " second-vid" : "")
+                (feature.video === "video-devices.m4v" ? " second-vid" : "")
               }
-              src={require(`../../assets/videos/${video}`)}
+              src={require(`../../assets/videos/${feature.video}`)}
               autoPlay
               playsInline
               muted
@@ -21,17 +25,17 @@ const Feature = ({ title, desc, image, video = "", reverse = false }) => {
           )}
           <img
             className="foreground-image"
-            src={require(`../../assets/images/${image}`)}
-            alt={title}
+            src={require(`../../assets/images/${feature.image}`)}
+            alt={feature.title}
           />
         </div>
         <div>
-          <h3 className="txt-xl">{title}</h3>
-          <p className="txt-md">{desc}</p>
+          <h3 className="txt-xl">{feature.title}</h3>
+          <p className="txt-md">{feature.desc}</p>
         </div>
       </div>
     </div>
-  );
+  ));
 };
 
 export default Feature;

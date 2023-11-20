@@ -1,3 +1,4 @@
+/* Header Section */
 .netflix-logo {
   width: 9.25rem;
   height: 2.5rem;
@@ -39,7 +40,7 @@
 }
 /* end header */
 
-/* hero section */
+/* Hero Section */
 .btn-get-started button {
   background-color: var(--primary-color);
   padding: 3px 20px;
@@ -66,6 +67,8 @@
   }
   .get-started {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .netflix-logo {
     width: 5.5625rem;
@@ -83,7 +86,7 @@
 }
 /* end hero section */
 
-/* feature section */
+/* Feature Section */
 .feature {
   background-color: var(--black-color);
   height: 60vh;
@@ -132,12 +135,15 @@
     flex-direction: column-reverse;
   }
   .feature-content {
-    padding: 2rem 5rem;
     gap: 2rem;
     flex-direction: column-reverse;
   }
 }
-
+@media screen and (max-width: 1280px) {
+  .feature-content {
+    padding: 2rem 5rem;
+  }
+}
 /* end feature section */
 
 /* Question Section */
@@ -149,11 +155,12 @@
   padding: 5rem 20rem;
   background-color: var(--black-color);
   height: fit-content;
-  gap: 0.5rem;
+  gap: 0.53rem;
 }
 .answer {
   padding: 1rem 2rem;
   background-color: var(--bg-color);
+  width: 70vw;
 }
 .question {
   padding: 1rem 2rem;
@@ -165,8 +172,34 @@
 .question:hover {
   filter: brightness(150%);
 }
-@media screen and (max-width: 991px) {
+
+@media screen and (max-width: 1280px) {
   .question-section {
+    padding: 2rem 5rem;
+  }
+}
+/* end question section */
+
+/* Footer Section */
+.footer {
+  border-top: 10px solid var(--bg-color);
+  padding: 5rem 20rem;
+  background-color: var(--black-color);
+  height: fit-content;
+}
+.footer-anchors {
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.anchors-columns li {
+  padding: 0.3rem 0rem;
+}
+.txt-color {
+  color: #b3b3b3;
+}
+@media screen and (max-width: 1280px) {
+  .footer {
     padding: 2rem 5rem;
   }
 }

@@ -1,5 +1,6 @@
 export const features = [
   {
+    index: 1,
     title: "Enjoy on your TV",
     desc: "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.",
     image: "tv.png",
@@ -7,11 +8,13 @@ export const features = [
     reverse: "true",
   },
   {
+    index: 2,
     title: "Download your shows to watch offline",
     desc: "Save your favorites easily and always have something to watch.",
     image: "mobile.jpg",
   },
   {
+    index: 3,
     title: "Watch everywhere",
     desc: "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.",
     image: "device-pile.png",
@@ -19,6 +22,7 @@ export const features = [
     reverse: "true",
   },
   {
+    index: 4,
     title: "Create profiles for kids",
     desc: "Send kids on adventures with their favorite characters in a space made just for them—free with your membership.",
     image: "kids.png",
@@ -38,7 +42,7 @@ export const faqData = [
   {
     question: "Where can I watch?",
     answer: (
-      <p>
+      <span>
         Watch anywhere, anytime. Sign in with your Netflix account to watch
         instantly on the web at netflix.com from your personal computer or on
         any internet-connected device that offers the Netflix app, including
@@ -49,7 +53,7 @@ export const faqData = [
         You can also download your favorite shows with the iOS, Android, or
         Windows 10 app. Use downloads to watch while you're on the go and
         without an internet connection. Take Netflix with you anywhere.
-      </p>
+      </span>
     ),
   },
   {
@@ -65,7 +69,7 @@ export const faqData = [
   {
     question: "Is Netflix good for kids?",
     answer: (
-      <p>
+      <span>
         The Netflix Kids experience is included in your membership to give
         parents control while kids enjoy family-friendly TV shows and movies in
         their own space.
@@ -74,7 +78,7 @@ export const faqData = [
         Kids profiles come with PIN-protected parental controls that let you
         restrict the maturity rating of content kids can watch and block
         specific titles you don’t want kids to see.
-      </p>
+      </span>
     ),
   },
 ];

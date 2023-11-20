@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AnimateHeight from "react-animate-height";
+import Minus from "../../assets/svgs/minus.svg";
 
 const Question = ({ question, answer }) => {
   const [height, setHeight] = useState(0);
@@ -16,7 +17,11 @@ const Question = ({ question, answer }) => {
           </p>
         </div>
         <div>
-          <i className="fa-solid fa-plus fa-2xl"></i>
+          {height === 0 ? (
+            <i className="fa-solid fa-plus fa-2xl"></i>
+          ) : (
+            <img src={Minus} alt="minus" />
+          )}
         </div>
       </div>
 
