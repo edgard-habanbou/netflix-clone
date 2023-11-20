@@ -1,12 +1,13 @@
 import React from "react"
-import "./index.css"
+import "./styles.css"
 import StickyNav from "../../components/common/StickyNav"
+import Hero from "../../components/genre/Hero"
 
 function Genre() {
     return (
         <div className='genre-page'>
             <StickyNav />
-            <p></p>
+            <Hero />
         </div>
     )
 }
