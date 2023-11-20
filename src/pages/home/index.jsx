@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/home/Header';
 import StartWatching from '../../components/home/StartWatching';
 import Feature from '../../components/home/Feature';
+import  { features } from './variables.js';
 const HomePage = () => {
   return (
     <div>
@@ -14,13 +15,16 @@ const HomePage = () => {
 
         </div>
 
-      <Feature
-        title="Enjoy on your TV"
-        desc="Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more."
-        image='tv.png'
-        video='tv-video.m4v'
-        reverse='true'
-      />
+        
+      {features.map((feature, index) => (
+        <Feature
+          title={feature.title}
+          desc={feature.desc}
+          image={feature.image}
+          video={feature.video}
+          reverse={feature.reverse}
+        />
+      ))}
     </div>
   );
 
