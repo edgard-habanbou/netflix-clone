@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../../components/home/Header";
 import StartWatching from "../../components/home/StartWatching";
 import Feature from "../../components/home/Feature";
-import Question from "../../components/home/Question";
 import { features } from "./variables.js";
+import FAQ from "../../components/home/Faqs.jsx";
 const HomePage = () => {
   return (
     <div>
@@ -28,7 +28,7 @@ const HomePage = () => {
           reverse={feature.reverse}
         />
       ))}
-      <Question />
+      <FAQ />
     </div>
   );
 };
