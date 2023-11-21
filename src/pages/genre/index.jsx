@@ -3,6 +3,7 @@ import "./styles.css"
 import StickyNav from "../../components/common/StickyNav"
 import Hero from "../../components/genre/Hero"
 import MoviesCarousel from "../../components/common/MovieCarousel"
+import Footer from "../../components/common/Footer"
 
 function Genre() {
     let moviesByGenre
@@ -48,13 +49,6 @@ function Genre() {
             .catch((err) => console.error(err))
     }
     useEffect(() => {
-        const fetchGenres = async () => {
-            let test = await getGenres()
-            setGenres(test)
-        }
-        fetchGenres()
-    }, [])
-    useEffect(() => {
         const fetchMoviesByGenre = async (genre) => {
             try {
                 const CarouselData = await getMoviesByGenre(genre.id)
@@ -75,6 +69,11 @@ function Genre() {
         const getAPI = async () => {
             await getPopularMovies()
         }
+        const fetchGenres = async () => {
+            let test = await getGenres()
+            setGenres(test)
+        }
+        fetchGenres()
         getAPI()
     }, [])
 
@@ -95,6 +94,7 @@ function Genre() {
                     />
                 )
             })}
+            <Footer />
         </div>
     )
 }
