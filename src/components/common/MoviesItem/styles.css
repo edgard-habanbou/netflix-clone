@@ -3,6 +3,7 @@
     max-width: calc(100% / var(--items-per-screen));
     padding: 0.25rem;
     position: relative;
+    overflow-y: hidden;
 }
 .slider-item {
     aspect-ratio: 16 / 9;

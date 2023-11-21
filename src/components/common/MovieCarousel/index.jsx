@@ -32,7 +32,6 @@ function MoviesCarousel({ title, movies }) {
         if (newIndex < 0) {
             newIndex = maxItems / itemsNumber - 1
         }
-        console.log(newIndex)
         setActiveIndex(newIndex)
     }
     const handleNextClick = () => {
@@ -40,7 +39,6 @@ function MoviesCarousel({ title, movies }) {
         if (newIndex >= maxItems / itemsNumber) {
             newIndex = 0
         }
-        console.log(newIndex)
         setActiveIndex(newIndex)
     }
 
@@ -60,8 +58,8 @@ function MoviesCarousel({ title, movies }) {
                     style={{
                         transform: `translateX(-${activeIndex * 100}%)`,
                     }}>
-                    {movies.map(() => {
-                        return <MoviesItem />
+                    {movies.map((m, i) => {
+                        return <MoviesItem title={m.name} id={m.id} key={i} />
                     })}
                 </div>
                 <button
