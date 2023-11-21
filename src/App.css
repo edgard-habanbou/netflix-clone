@@ -34,10 +34,18 @@ select {
   font-weight: 400;
   color: var(--txt-color);
 }
+.txt-sm {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--txt-color);
+}
+
 .input input {
-  padding: 15px;
+  padding: 11px;
   border: none;
   border-radius: 10px;
+  color: var(--txt-color);
+
   background-color: #221f1fce;
   width: 20rem;
 }
