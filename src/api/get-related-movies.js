@@ -1,4 +1,4 @@
-import { options } from "./options";
+import { options } from "./option";
 
 export const getRelatedMovies = async (movieId) => {
   return await fetch(
