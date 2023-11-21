@@ -1,10 +1,7 @@
 import "./App.css";
-import HomePage from "./pages/home/index.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-function Home() {
-  return <HomePage />;
-}
+import Movie from "./pages/movie/index.jsx";
+import HomePage from "./pages/home/index.jsx";
 
 function NotFound() {
   return <h1>404 Not Found</h1>;
@@ -14,7 +11,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies/:id" element={<Movie />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
