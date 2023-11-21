@@ -1,13 +1,12 @@
-import React from 'react';
-import '../../pages/home/home.css';
+import React from "react";
+import "../../pages/home/home.css";
 
-const Input = ({placeholder}) => {
+const Input = ({ placeholder }) => {
   return (
     <div className="input">
-      <input type="text" placeholder={placeholder} />
+      <input className="txt-sm" type="text" placeholder={placeholder} />
     </div>
-
   );
-}
+};
 
 export default Input;
