@@ -5,8 +5,10 @@ import Hero from "../../components/genre/Hero"
 import MoviesCarousel from "../../components/common/MovieCarousel"
 
 function Genre() {
+    let moviesByGenre
     const [popularMovies, setPopularMovies] = useState([])
     const [genres, setGenres] = useState([])
+    const [carouselList, setcarouselList] = useState([])
     const options = {
         method: "GET",
         headers: {
@@ -21,7 +23,10 @@ function Genre() {
             options
         )
             .then((response) => response.json())
-            .then((response) => setGenres(response))
+            .then((response) => response.genres)
+            .then((res) => {
+                return res
+            })
             .catch((err) => console.error(err))
     }
     const getPopularMovies = async () => {
@@ -43,10 +48,34 @@ function Genre() {
             .catch((err) => console.error(err))
     }
     useEffect(() => {
-        getPopularMovies()
-        getGenres()
-
-        console.log(genres)
+        const fetchGenres = async () => {
+            let test = await getGenres()
+            setGenres(test)
+        }
+        fetchGenres()
+    }, [])
+    useEffect(() => {
+        const fetchMoviesByGenre = async (genre) => {
+            try {
+                const CarouselData = await getMoviesByGenre(genre.id)
+                setcarouselList((prevCarousel) => [
+                    ...prevCarousel,
+                    { genreTitle: genre.name, movies: CarouselData },
+                ])
+            } catch (error) {
+                console.error(`Error fetching movies for ${genre}:`, error)
+            }
+        }
+        genres.forEach((genre) => {
+            fetchMoviesByGenre(genre)
+        })
+        console.log(carouselList)
+    }, [genres])
+    useEffect(() => {
+        const getAPI = async () => {
+            await getPopularMovies()
+        }
+        getAPI()
     }, [])
 
     return (
@@ -58,6 +87,14 @@ function Genre() {
             ) : (
                 <MoviesCarousel title={"Popular"} movies={popularMovies} />
             )}
+            {carouselList.map((carousel) => {
+                return (
+                    <MoviesCarousel
+                        title={carousel.genreTitle}
+                        movies={carousel.movies}
+                    />
+                )
+            })}
         </div>
     )
 }
