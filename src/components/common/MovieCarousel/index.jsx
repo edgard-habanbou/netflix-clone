@@ -3,7 +3,7 @@ import "./styles.css"
 import MoviesItem from "../MoviesItem"
 
 function MoviesCarousel({ title, movies }) {
-    const [screenWidth, setScreenWidth] = useState(getCurrentWidth())
+    const [screenWidth, setScreenWidth] = useState(getCurrentWidth)
     const [itemsNumber, setItemNumber] = useState(4)
     const [activeIndex, setActiveIndex] = useState(0)
     const maxItems = movies.length
@@ -11,6 +11,7 @@ function MoviesCarousel({ title, movies }) {
     function getCurrentWidth() {
         return window.innerWidth
     }
+    // console.log(movies.backdrop_path)
 
     useEffect(() => {
         const updateWidth = () => {
@@ -59,7 +60,14 @@ function MoviesCarousel({ title, movies }) {
                         transform: `translateX(-${activeIndex * 100}%)`,
                     }}>
                     {movies.map((m, i) => {
-                        return <MoviesItem title={m.name} id={m.id} key={i} />
+                        return (
+                            <MoviesItem
+                                title={m.title}
+                                image={`https://image.tmdb.org/t/p/original/${m.poster_path}`}
+                                id={m.id}
+                                key={i}
+                            />
+                        )
                     })}
                 </div>
                 <button
