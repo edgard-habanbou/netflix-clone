@@ -11,6 +11,7 @@ import { GetUpcomingMovies } from "../../api/get-upcoming-movies"
 import { GetMoviePoster } from "../../api/get-movie-poster"
 import { GetCast } from "../../api/get-movie-credits"
 import "./styles.css"
+import CommingSoon from "../../components/movie/Comming Soon"
 
 const Movies = () => {
     const { movieID } = useParams()
@@ -74,77 +75,7 @@ const Movies = () => {
                 cast={Cast}
             />
             <RelatedMoviesSection movies={RelatedMovies} />
-            <div className='movie-wrapper'>
-                <div className='movie'>
-                    <h1>MOVIE: {}</h1>
-                    <h1>TIME: {convertMinutesToHours(Movie.runtime)}</h1>
-                    <h1>release_date: {Movie.release_date?.substring(0, 4)}</h1>
-                    <h1>overview: {Movie.overview}</h1>
-                    <h1>TAGLINE: {Movie.tagline}</h1>
-                    <h1>
-                        AUDIO:
-                        {Movie.spoken_languages?.map((audio, index) => (
-                            <p key={index}>{audio.english_name}</p>
-                        ))}
-                    </h1>
-                    <h1>
-                        STARRING:
-                        {Cast.slice(0, 3).map((castMember, index) => (
-                            <p key={index}>{castMember.name}</p>
-                        ))}
-                    </h1>
-                    <div className='movie-background'>
-                        <img
-                            src={
-                                Movie.backdrop_path
-                                    ? `https://image.tmdb.org/t/p/original${Movie.backdrop_path}`
-                                    : `https://image.tmdb.org/t/p/original${Movie.poster_path}`
-                            }
-                            width='300px'
-                            height='300px'
-                            alt={Movie.title}
-                        />
-                    </div>
-                    {MoviePoster ? (
-                        <div className='movie-poster'>
-                            <img
-                                src={`https://image.tmdb.org/t/p/original${MoviePoster}`}
-                                alt={Movie.title}
-                                width='300px'
-                                height='300px'
-                            />
-                        </div>
-                    ) : null}
-                </div>
-
-                <div className='upcoming-movies'>
-                    <h1>UPCOMING:</h1>
-                    {UpcomingMovies.map((UpcomingMovie, index) => (
-                        <div key={index}>
-                            <h3>{UpcomingMovie?.title}</h3>
-                            <p>{UpcomingMovie?.overview}</p>
-                        </div>
-                    ))}
-                </div>
-                <div className='related-movies'>
-                    <h1>RELATED:</h1>
-                    {RelatedMovies.map((relatedMovie, index) => (
-                        <div key={index}>
-                            <h3>{relatedMovie?.title}</h3>
-                            <img
-                                src={
-                                    relatedMovie.backdrop_path
-                                        ? `https://image.tmdb.org/t/p/original${relatedMovie.backdrop_path}`
-                                        : `https://image.tmdb.org/t/p/original${relatedMovie.poster_path}`
-                                }
-                                alt={Movie.title}
-                                width='300px'
-                                height='300px'
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <CommingSoon movies={UpcomingMovies} />
             <Footer />
         </div>
     )

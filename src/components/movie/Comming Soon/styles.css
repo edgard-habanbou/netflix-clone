@@ -1,0 +1,28 @@
+.comming {
+    margin: 30px 0;
+    padding-inline: 3%;
+    color: var(--txt-color);
+}
+.comming h3 {
+    font-size: 32px;
+    font-weight: 800;
+}
+.comming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+.comming-grid-item h5 {
+    font-size: 16px;
+}
+.comming-grid-item p {
+    font-size: 12px;
+    color: grey;
+}
+
+@media only screen and (max-width: 1000px) {
+    .comming-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
