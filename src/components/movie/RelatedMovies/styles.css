@@ -4,7 +4,7 @@
 .movies-grid {
     margin-inline: 3%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
 }
 .movie-item {
@@ -23,4 +23,14 @@
     color: var(--txt-color);
     font-size: 32px;
     font-weight: 800;
+}
+@media only screen and (max-width: 1000px) {
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .movies-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
