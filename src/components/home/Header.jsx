@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/svgs/logo.svg";
 import "../../pages/home/home.css";
 import SelectLanguage from "../../components/common/SelectLanguage";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header-wrapper flex center">
@@ -11,7 +12,11 @@ const Header = () => {
         </div>
         <div className="header-options flex space-around center">
           <SelectLanguage />
-          <button className="btn-sign-in">Sign In</button>
+          <div className="btn-sign-in">
+            <Link className="sign-btn-link" to="/genre">
+              Sign In
+            </Link>
+          </div>
         </div>
       </div>
     </div>

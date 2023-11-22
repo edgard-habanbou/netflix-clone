@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import AnimateHeight from "react-animate-height";
 import Minus from "../../assets/svgs/minus.svg";
 
 const Question = ({ question, answer }) => {
-  const [height, setHeight] = useState(0);
+  const [maxHeight, setMaxHeight] = useState("0px");
 
   return (
     <div>
       <div
         className="txt-md question flex space-between"
-        onClick={() => setHeight(height === 0 ? "auto" : 0)}
+        onClick={() => {
+          setMaxHeight(maxHeight === "900px" ? "0px" : "900px");
+        }}
       >
         <div>
           <p>
@@ -17,17 +18,21 @@ const Question = ({ question, answer }) => {
           </p>
         </div>
         <div>
-          {height === 0 ? (
+          {maxHeight === "0px" ? (
             <i className="fa-solid fa-plus fa-2xl"></i>
           ) : (
             <img src={Minus} alt="minus" />
           )}
         </div>
       </div>
-
-      <AnimateHeight duration={500} height={height}>
-        <p className="txt-md answer">{answer}</p>
-      </AnimateHeight>
+      <div
+        className="answer txt-md"
+        style={{
+          maxHeight: maxHeight,
+        }}
+      >
+        <p>{answer}</p>
+      </div>
     </div>
   );
 };
