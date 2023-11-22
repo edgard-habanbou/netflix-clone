@@ -10,6 +10,9 @@
     top: 0;
     width: 100%;
 }
+.movie-logo {
+    margin-bottom: 40px;
+}
 .movie-logo img {
     height: 100%;
     width: 100%;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import StickyNav from "../../components/common/StickyNav"
 import Footer from "../../components/common/Footer"
 import Hero from "../../components/movie/Hero"
+import Details from "../../components/movie/Details"
 import { useParams } from "react-router-dom"
 import { GetMovieById } from "../../api/get-movie-by-id"
 import { getRelatedMovies } from "../../api/get-related-movies"
@@ -59,6 +60,16 @@ const Movies = () => {
                 duration={convertMinutesToHours(Movie.runtime)}
                 genre={Movie.genres}
                 overview={Movie.overview}
+                cast={Cast}
+            />
+            <section className='movie-tagline'>
+                <div className='tagline-line'></div>
+                <p>{Movie.tagline}</p>
+                <div className='tagline-line'></div>
+            </section>
+            <Details
+                genres={Movie.genres}
+                audio={Movie.spoken_languages}
                 cast={Cast}
             />
             <div className='movie-wrapper'>
