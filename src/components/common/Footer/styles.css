@@ -1,0 +1,22 @@
+.footer {
+    widows: 100%;
+    padding: 200px 3%;
+}
+.footer-nav {
+    widows: 100%;
+}
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.footer-nav li {
+    width: 250px;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 0 22px 0 0;
+    color: var(--txt-color);
+}

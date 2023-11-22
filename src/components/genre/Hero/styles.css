@@ -1,0 +1,19 @@
+.hero {
+    width: 100%;
+    padding: 20px 3%;
+}
+.hero-container {
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--txt-color);
+}
+.hero-container > h1 {
+    font-weight: 900;
+    font-size: 64px;
+}
+.hero-container > p {
+    font-size: 18px;
+    line-height: 1.3rem;
+}

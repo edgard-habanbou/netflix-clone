@@ -1,0 +1,26 @@
+.movie-item {
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    padding: 0.25rem;
+    position: relative;
+    overflow-y: hidden;
+}
+.slider-item {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.movie-item > p {
+    color: var(--txt-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    transform: translateY(100%) translateX(-50%);
+    transition: transform 500ms ease;
+}
+.movie-item:hover > p {
+    transform: translateY(00%) translateX(-50%);
+}
