@@ -1,38 +1,33 @@
 /* Sticky Nav Start */
 .sticky-nav {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 16px 3%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    background-color: var(--black-color);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 3%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: var(--black-color);
 }
-.netflix-logo {
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    width: 110px;
-    background-image: url("../../../assets/svgs/logo.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+.netflix-logo img {
+  padding-top: 3px;
+  width: 110px;
 }
 .nav-account {
-    height: 33px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 @media only screen and (max-width: 600px) {
-    .netflix-logo {
-        height: 2rem;
-        width: 20px;
-        background-image: url("../../../assets/svgs/smallLogo.svg");
-    }
+  .netflix-logo {
+    height: 2rem;
+    width: 20px;
+    background-image: url("../../../assets/svgs/smallLogo.svg");
+  }
 }
 /* Sticky Nav End */
