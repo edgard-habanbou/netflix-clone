@@ -1,0 +1,26 @@
+.related-movies {
+    width: 100%;
+}
+.movies-grid {
+    margin-inline: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.movie-item {
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    width: 90%;
+}
+.movie-item img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.related-movies h3 {
+    padding-inline: 3%;
+    color: var(--txt-color);
+    font-size: 32px;
+    font-weight: 800;
+}

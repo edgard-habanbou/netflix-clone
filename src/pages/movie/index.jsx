@@ -3,6 +3,7 @@ import StickyNav from "../../components/common/StickyNav"
 import Footer from "../../components/common/Footer"
 import Hero from "../../components/movie/Hero"
 import Details from "../../components/movie/Details"
+import RelatedMoviesSection from "../../components/movie/RelatedMovies"
 import { useParams } from "react-router-dom"
 import { GetMovieById } from "../../api/get-movie-by-id"
 import { getRelatedMovies } from "../../api/get-related-movies"
@@ -39,7 +40,7 @@ const Movies = () => {
 
             const Cast = await GetCast(movieID)
             setCast(Cast)
-            console.log(Movie)
+            console.log(RelatedMovies)
         }
 
         fetchData()
@@ -72,6 +73,7 @@ const Movies = () => {
                 audio={Movie.spoken_languages}
                 cast={Cast}
             />
+            <RelatedMoviesSection movies={RelatedMovies} />
             <div className='movie-wrapper'>
                 <div className='movie'>
                     <h1>MOVIE: {}</h1>
