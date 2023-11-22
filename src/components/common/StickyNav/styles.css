@@ -15,7 +15,7 @@
 }
 .netflix-logo img {
   padding-top: 3px;
-  width: 110px;
+  width: 80%;
 }
 .nav-account {
   height: 33px;
@@ -23,11 +23,22 @@
   align-items: center;
   gap: 1rem;
 }
-@media only screen and (max-width: 600px) {
+.small-logo img {
+  width: 50px;
+  height: 40px;
+}
+.small-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
   .netflix-logo {
     height: 2rem;
     width: 20px;
-    background-image: url("../../../assets/svgs/smallLogo.svg");
+  }
+  .NavTag {
+    display: none;
   }
 }
 /* Sticky Nav End */
