@@ -18,9 +18,10 @@
 .handle {
     border: none;
     border-radius: 1rem;
+    z-index: 5;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0);
     margin: 0.25rem 0;
     width: 3rem;
     cursor: pointer;
@@ -32,28 +33,8 @@
     line-height: 0;
     transition: background-color 150ms ease-in-out;
 }
-.left-handle {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.right-handle {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.handle:hover,
-.handle:focus {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
 .text {
     transition: transform 150ms ease-in-out;
-}
-
-.handle:hover .text,
-.handle:focus .text {
-    transform: scale(1.2);
 }
 
 .header {
@@ -62,7 +43,6 @@
     padding: 0.5rem calc(0.25rem * 2 + 3rem);
     align-items: center;
 }
-
 .title {
     font-size: 1.5rem;
     color: var(--txt-color);
